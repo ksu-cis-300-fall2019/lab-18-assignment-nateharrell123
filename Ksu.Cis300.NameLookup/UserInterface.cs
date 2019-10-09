@@ -1,5 +1,6 @@
 ﻿/* UserInterface.cs
  * Author: Rod Howell
+ * Modified by Nate Harrell
  */
 using System;
 using System.Collections.Generic;
@@ -96,6 +97,11 @@ namespace Ksu.Cis300.NameLookup
             }
         }
 
+        /// <summary>
+        /// This removes given parameter from the given tree.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void UxRemove_Click(object sender, EventArgs e)
         {
             string name = uxName.Text.Trim().ToUpper();

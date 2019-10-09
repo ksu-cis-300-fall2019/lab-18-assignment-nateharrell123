@@ -19,6 +19,12 @@ namespace Ksu.Cis300.NameLookup
     public class Dictionary<TKey, TValue> where TKey : IComparable<TKey>
     {
 
+        /// <summary>
+        /// Removes the minimum key.
+        /// </summary>
+        /// <param name="t"></param>
+        /// <param name="min"></param>
+        /// <returns></returns>
         private static BinaryTreeNode<KeyValuePair<TKey, TValue>> RemoveMininumKey(BinaryTreeNode<KeyValuePair<TKey, TValue>> t, out KeyValuePair<TKey, TValue> min)
         {
 
@@ -34,6 +40,13 @@ namespace Ksu.Cis300.NameLookup
             }
         }
 
+        /// <summary>
+        /// Removes the given key from the tree.
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="t"></param>
+        /// <param name="removed"></param>
+        /// <returns></returns>
         private static BinaryTreeNode<KeyValuePair<TKey, TValue>> Remove(TKey key, BinaryTreeNode<KeyValuePair<TKey, TValue>> t, out bool removed)
         {
             if(t == null)
